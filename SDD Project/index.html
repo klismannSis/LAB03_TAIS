@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronóstico del Clima - Open-Meteo</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Pronóstico del Clima</h1>
+            <p class="subtitle">Consulta el clima actual de cualquier ciudad usando la API de Open-Meteo</p>
+        </header>
+
+        <main>
+            <!-- Formulario de búsqueda -->
+            <section class="search-section">
+                <div class="search-container">
+                    <!-- CitySearchForm se insertará aquí -->
+                </div>
+            </section>
+
+            <!-- Indicador de carga -->
+            <section id="loadingSection" class="loading-section" hidden>
+                <div class="loading-container">
+                    <div class="spinner"></div>
+                    <p>Consultando pronóstico del clima...</p>
+                </div>
+            </section>
+
+            <!-- Mensaje de error -->
+            <section id="errorSection" class="error-section" hidden>
+                <!-- ErrorMessage se insertará aquí -->
+            </section>
+
+            <!-- Resultados del clima -->
+            <section id="weatherSection" class="weather-section" hidden>
+                <!-- WeatherDisplay se insertará aquí -->
+            </section>
+        </main>
+
+        <footer>
+            <p>Proyecto SDD - Implementado con TypeScript estricto</p>
+            <p><i class="fas fa-code"></i> Según especificación tasks.md</p>
+        </footer>
+    </div>
+
+    <!-- Importar JavaScript compilado desde TypeScript -->
+    <script type="module" src="dist/main.js"></script>
+</body>
+</html>
